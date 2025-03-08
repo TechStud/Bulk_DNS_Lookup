@@ -36,9 +36,13 @@ Original Forum Title: Which Is The Best DNS for Secure Browsing: CloudFlare, Qua
 **Example**
 ![image](https://github.com/user-attachments/assets/ad383c9e-e87d-4665-8be1-6ca6184856c3)
 
+Output:
+- \<STATUS\> \<BLOCKED|NOT_BLOCKED\>
 - **NXDOMAIN** - Indicates the queried domain name does not exist.
 - **SERVFAIL** - Indicates the DNS server cannot provide an answer for the query.
 - **NOERROR**  - Indicates the query was successful. May return a valid IP or 0.0.0.0 (Blocked/Sinkholed) or an empty response (depending if the requested DNS record type exists)
+- **BLOCKED**      - IP has been sinkholed / blocked (0.0.0.0)
+- **NOT_BLOCKED**  - Valid IP was returned
 
 
 I ran the Zonefiles domain list which contained ~20k activly compromised domains (filename: compromised_domains_live.txt).  
