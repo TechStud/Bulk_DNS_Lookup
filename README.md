@@ -4,7 +4,7 @@ A simple bash script that generates a CSV of DNS lookups from a list of domains.
 
 The original bash script from @LTS_Tom _(see details below)_ has been heavily modified.  
 - added script timer **(Duration: 0 days 00 hrs 00 mins 00 secs)**.
-- added progress bar: Progress : **[####################################### ]  99% [99/100] -- Resolving: <domainname>**
+- added progress bar: Progress : **[####################################### ]  99% [99/100] -- Resolving: \<domainname\>**
 - added detail about **ZoneFiles Compromised domain list** in the script comments.
 - added all popular DNS Resolvers from **Cloudflare, Quad9, AdGuard DNS** and a **NextDNS** (Let's test them ALL! - 10 in total)
 - added additional functionality to dns query commands to simplify the output _(see example below)_.
