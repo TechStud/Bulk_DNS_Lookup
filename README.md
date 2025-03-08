@@ -33,4 +33,16 @@ Original Forum Title: Which Is The Best DNS for Secure Browsing: CloudFlare, Qua
   ```$ sh ./bulk_dns_lookup.sh```
 7. Once complete, you should be able to use Excel or equivilant editor to review the contents of the CSV output file.
 
+**Example**
+![image](https://github.com/user-attachments/assets/ad383c9e-e87d-4665-8be1-6ca6184856c3)
 
+- **NXDOMAIN** - Indicates the queried domain name does not exist.
+- **SERVFAIL** - Indicates the DNS server cannot provide an answer for the query.
+- **NOERROR**  - Indicates the query was successful. May return a valid IP or 0.0.0.0 (Blocked/Sinkholed) or an empty response (depending if the requested DNS record type exists)
+
+
+I ran the Zonefiles domain list which contained ~20k activly compromised domains (filename: compromised_domains_live.txt).  
+- Once complete, using Google Sheets, I performed a simple =unique(sort(...)) across the data to get the unique values returned and calculate some totals / percentages...  
+![image](https://github.com/user-attachments/assets/ddc43ddd-153c-4a57-966d-45a9d785ae44)
+- Looks like a good 96% of the domains were properly Blocked/Sinkholed!
+- The remainder were a mish/mash of other responses, except for the 2 domains that look to have had their block lifted across the board.
